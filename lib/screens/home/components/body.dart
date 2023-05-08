@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.all(defaultSize! * 2), //20
-              child: TitleText(
+              child: const TitleText(
                 title: "Browse by Categories",
               ),
             ),
@@ -32,10 +32,10 @@ class Body extends StatelessWidget {
                   ? Categories(snapshot.data!)
                   : Center(child: Image.asset("assets/ripple.gif")),
             ),
-            Divider(height: 5),
+            const Divider(height: 5),
             Padding(
               padding: EdgeInsets.all(defaultSize * 2), //20
-              child: TitleText(title: "Recommands For You"),
+              child: const TitleText(title: "Recommands For You"),
             ),
             // Right Now product is our demo product
             FutureBuilder(
