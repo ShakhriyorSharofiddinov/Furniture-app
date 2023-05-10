@@ -1,12 +1,15 @@
-class Category {
+class CategoryModel {
   final String id, title, image;
   final int numOfProducts;
 
-  Category({required this.id, required this.title, required this.image, required this.numOfProducts});
+  CategoryModel(
+      {required this.id,
+      required this.title,
+      required this.image,
+      required this.numOfProducts});
 
-  // It creates an Category from JSON
-  factory Category.fromJson(Map<String, dynamic> json) {
-    return Category(
+  factory CategoryModel.fromJson(Map<String, dynamic> json) {
+    return CategoryModel(
       id: json["id"],
       title: json["title"],
       image: json["image"],
@@ -16,7 +19,7 @@ class Category {
 }
 
 // Our demo category
-Category category = Category(
+CategoryModel category = CategoryModel(
   id: "1",
   title: "Armchair",
   image: "https://i.imgur.com/JqKDdxj.png",

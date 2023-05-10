@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../size_config.dart';
+import '../../core/size_config.dart';
 
 class TitleText extends StatelessWidget {
   const TitleText({
@@ -16,7 +16,7 @@ class TitleText extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
-        fontSize: defaultSize! * 1.6, //16
+        fontSize: defaultSize! * 1.6,
         fontWeight: FontWeight.bold,
       ),
     );

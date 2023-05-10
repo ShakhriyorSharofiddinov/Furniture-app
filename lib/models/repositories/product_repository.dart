@@ -1,5 +1,5 @@
-import 'package:furniture/models/services/service.dart';
 
+import 'package:furniture/models/services/service.dart';
 import '../Product.dart';
 import '../services/base_service.dart';
 
@@ -9,9 +9,8 @@ class ProductRepository {
   Future<List<Product>> fetchProducts() async {
     dynamic response = await _productService.getResponse('/products');
 
-    final jsonData = response['results'] as List;
+    List<Product> products = (response as List).map((data) => Product.fromJson(data)).toList();
 
-    List<Product> movies = jsonData.map((e) => Product.fromJson(e)).toList();
-    return movies;
+    return products;
   }
 }

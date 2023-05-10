@@ -4,7 +4,7 @@ import 'package:furniture/models/repositories/product_repository.dart';
 
 import '../core/api_response.dart';
 
-class MoviesListViewModel extends ChangeNotifier {
+class ProductViewModel extends ChangeNotifier {
   ApiResponse _apiResponse = ApiResponse.initial('Empty');
 
   ApiResponse get response {
