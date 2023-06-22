@@ -12,6 +12,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     double? defaultSize = SizeConfig.defaultSize;
     return SingleChildScrollView(
+      physics: NeverScrollableScrollPhysics(),
       child: SizedBox(
         width: double.infinity,
         height: SizeConfig.orientation == Orientation.landscape

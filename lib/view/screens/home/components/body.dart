@@ -21,6 +21,9 @@ class _HomeBodyState extends State<HomeBody> {
   Widget build(BuildContext context) {
     double? defaultSize = SizeConfig.defaultSize;
     return SingleChildScrollView(
+      physics: BouncingScrollPhysics(
+        parent: AlwaysScrollableScrollPhysics()
+      ),
       child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

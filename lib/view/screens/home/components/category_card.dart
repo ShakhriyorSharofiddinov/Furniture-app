@@ -22,7 +22,6 @@ class CategoryCard extends StatelessWidget {
           child: Stack(
             alignment: Alignment.bottomCenter,
             children: <Widget>[
-              // This is custom Shape thats why we need to use ClipPath
               ClipPath(
                 clipper: CategoryCustomShape(),
                 child: AspectRatio(

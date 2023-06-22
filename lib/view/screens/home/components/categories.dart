@@ -11,6 +11,8 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics()),
       scrollDirection: Axis.horizontal,
       child: Row(
         children: List.generate(

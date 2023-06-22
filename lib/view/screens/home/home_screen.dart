@@ -34,11 +34,11 @@ class _HomeScreenState extends State<HomeScreen> {
     await Future.delayed(const Duration(seconds: 1));
     Navigator.pushReplacement(
         context, PageRouteBuilder(pageBuilder: (a, b, c) => MyApp()));
+
   }
 
   @override
   Widget build(BuildContext context) {
-    // It help us to  make our UI responsive
     SizeConfig().init(context);
     return SafeArea(
       child: Scaffold(
